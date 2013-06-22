@@ -11,9 +11,11 @@ def _grid_column(x):
         return list(reversed(numbers))
 
 def grid():
-    out = []
+    grid_dict = {}
     for x in range(25):
-        out.extend([(x,y) for y in _grid_column(x)])
-    return out
+        col = _grid_column(x)
+        for y in range(25):
+            grid_dict[col[y]] = (x,y)
+    return grid_dict
 
 # im = Image.open('led.png')
