@@ -18,4 +18,10 @@ def grid():
             grid_dict[col[y]] = (x,y)
     return [grid_dict[i] for i in sorted(grid_dict.keys())]
 
-# im = Image.open('led.png')
+def frame(filename):
+    im = Image.open(filename)
+    frame = '\x00\x00\x07\x53'
+    for i, xy  in enumerate(grid()):
+        r,g,b = im.getpixel(xy)
+        frame +=
+
