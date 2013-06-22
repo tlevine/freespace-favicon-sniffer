@@ -9,4 +9,7 @@ def test_grid():
     'The mapping between LED number to pixel location should be correct.'
     n.assert_equal(grid()[0],  ( 0,  0))
     n.assert_equal(grid()[624],(24, 24))
- #  n.assert_equal(grid()[26], ( 1, 23))
+    n.assert_equal(grid()[26], ( 1, 23))
+
+def test_grid_type():
+    n.assert_is_instance(grid(), list)

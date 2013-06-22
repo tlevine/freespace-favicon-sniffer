@@ -16,6 +16,6 @@ def grid():
         col = _grid_column(x)
         for y in range(25):
             grid_dict[col[y]] = (x,y)
-    return grid_dict
+    return [grid_dict[i] for i in sorted(grid_dict.keys())]
 
 # im = Image.open('led.png')
